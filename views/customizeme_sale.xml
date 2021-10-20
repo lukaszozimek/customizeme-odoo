@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template
+    id="product_detail_attribute_image"
+    inherit_id="website_sale.product"
+    customize_show="True"
+    name="CustomizeMe"
+  >
+    <xpath
+      expr="//div[@id='product_details']"
+      position="after"
+    >
+      <div class="injectit_customizeme" t-esc="product.customizeme_link" style="display:none"/>
+      <script src ='/customizeme/static/js/customizeme.js'></script>
+    </xpath>
+  </template>
+</odoo>
+
+
